@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(245, 232, 208);
+    padding: 0px;
+    margin: 0px;
+}
+/* #road{
+    border-bottom: 7px dashed black;
+} */
+#runner{
+    background:url(./img/dogrun.jpg);
+    top: 205px;
+    position: relative;
+    width: 195px;
+    height: 180px;
+    animation: walk 1s steps(7) infinite,
+                forward 5s linear infinite;
+}@keyframes walk{
+    0%{
+        background-position: 680px;
+    }
+    100%{
+        background-position: 0px;
+    }
+}
+@keyframes forward{
+    0%{
+        transform: translateX(-100px);
+    }
+    0%{
+        transform: translateX(700px);
+    }
+}
+.sign{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    color:white;
+    text-shadow:  1px 1px 2px grey;
+    position: relative;
+    bottom: 130px;
+}
+.sign p{
+    position: relative;
+    top: 175px;
+    /* border: 5px rgba(172, 228, 18, 0.61) solid; */
+    /* background-color: rgba(172, 228, 18, 0.61) ; */
+}
+.menu{
+    position: relative;
+    width: 100%;
+    background-color: rgba(172, 228, 18, 0.61);
+  
+  }
+  .menu ul{
+    list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-self: center;
+      padding: 13px;
+  }
+  
+  .menu ul li a{
+    position: relative;
+    padding: 16px 0 5px;
+    margin: 0 25px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .menu ul li a:hover{
+  color: gray;
+  transition: .9s;
+  }
+  .menu ul li a:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform:  translateX(-50%) scaleX(0);
+    -webkit-transform:  translateX(-50%) scaleX(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-transition:transform 250ms;
+    transition:transform 250ms;
+  }
+  .menu ul li a:hover:after{
+    -webkit-transform: translateX(-50%) scaleX(1);
+    transform: translateX(-50%) scaleX(1);
+  }
+  .treasurehouse{
+    display: flex;
+    justify-content: center;
+    
+    font-family: fantasy;
+    font-size: 2em;
+    top: 10px;
+    position: relative;
+  }  
+  .treasurehouse a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px grey;
+  }
+    img{
+        z-index: 1;
+    }
